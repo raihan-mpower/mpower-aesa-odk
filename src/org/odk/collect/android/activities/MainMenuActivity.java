@@ -839,6 +839,3 @@ public class MainMenuActivity extends SherlockActivity implements DiskSyncListen
 	}
 
 }
-}
-
-}

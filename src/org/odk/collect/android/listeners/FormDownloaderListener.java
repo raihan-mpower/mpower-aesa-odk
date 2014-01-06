@@ -24,5 +24,3 @@ public interface FormDownloaderListener {
     void formsDownloadingComplete(HashMap<String, String> result);
     void progressUpdate(String currentFile, int progress, int total);
 }
-sUpdate(String currentFile, int progress, int total);
-}
