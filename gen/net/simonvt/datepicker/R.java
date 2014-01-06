@@ -51,7 +51,7 @@ public final class R {
 		public static final int month = 0x7f060052;
 		public static final int np__decrement = 0x7f060021;
 		public static final int np__increment = 0x7f060020;
-		public static final int np__numberpicker_input = 0x7f06009b;
+		public static final int np__numberpicker_input = 0x7f06009e;
 		public static final int pickers = 0x7f060051;
 		public static final int year = 0x7f060054;
 	}
@@ -59,7 +59,7 @@ public final class R {
 		public static final int activity_samples = 0x7f030017;
 		public static final int date_picker_dialog = 0x7f03001b;
 		public static final int date_picker_holo = 0x7f03001c;
-		public static final int number_picker_with_selector_wheel = 0x7f03002c;
+		public static final int number_picker_with_selector_wheel = 0x7f03002d;
 	}
 	public static final class string {
 		public static final int cancel = 0x7f08002d;

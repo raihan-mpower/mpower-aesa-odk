@@ -781,7 +781,7 @@ public class MainMenuActivity extends SherlockActivity implements DiskSyncListen
 	}
 
 	@Override
-	public void formsDownloadingComplete(HashMap<FormDetails, String> result) {
+	public void formsDownloadingComplete(HashMap<String, String> result) {
 		// TODO Auto-generated method stub
 		if (mDownloadFormsTask != null) {
             mDownloadFormsTask.setDownloaderListener(null);
@@ -837,5 +837,8 @@ public class MainMenuActivity extends SherlockActivity implements DiskSyncListen
 					}
 				});
 	}
+
+}
+}
 
 }

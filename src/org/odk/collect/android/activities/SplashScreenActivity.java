@@ -111,7 +111,7 @@ public class SplashScreenActivity extends Activity {
     private void endSplashScreen() {
 
         // launch new activity and close splash screen
-        startActivity(new Intent(SplashScreenActivity.this, MainMenuActivity.class));
+        startActivity(new Intent(SplashScreenActivity.this, LoginActivity.class));
         finish();
     }
 
@@ -231,5 +231,7 @@ public class SplashScreenActivity extends Activity {
 		Collect.getInstance().getActivityLogger().logOnStop(this);
     	super.onStop();
     }
+
+}
 
 }

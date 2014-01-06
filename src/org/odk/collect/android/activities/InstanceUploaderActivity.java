@@ -14,6 +14,7 @@
 
 package org.odk.collect.android.activities;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -361,7 +362,7 @@ public class InstanceUploaderActivity extends Activity implements InstanceUpload
 
 
     @Override
-    public void authRequest(Uri url, HashMap<String, String> doneSoFar) {
+    public void authRequest(URI url, HashMap<String, String> doneSoFar) {
         if (mProgressDialog.isShowing()) {
             // should always be showing here
             mProgressDialog.dismiss();

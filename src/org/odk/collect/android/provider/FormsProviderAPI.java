@@ -58,7 +58,9 @@ public final class FormsProviderAPI {
         
         
         // this is null on create, and can only be set on an update.
-        public static final String LANGUAGE = "language";
+        public static final String LANGUAGE = "language";      
+        public static final String MODEL_VERSION = "modelVersion";
+        public static final String UI_VERSION = "uiVersion";
         
         
     }

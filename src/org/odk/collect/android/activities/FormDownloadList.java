@@ -668,31 +668,57 @@ public class FormDownloadList extends ListActivity implements FormListDownloader
     }
 
 
-    @Override
-    public void formsDownloadingComplete(HashMap<FormDetails, String> result) {
-        if (mDownloadFormsTask != null) {
-            mDownloadFormsTask.setDownloaderListener(null);
-        }
+//    @Override
+//    public void formsDownloadingComplete(HashMap<FormDetails, String> result) {
+//  
+//    }
 
-        if (mProgressDialog.isShowing()) {
-            // should always be true here
-            mProgressDialog.dismiss();
-        }
 
-        Set<FormDetails> keys = result.keySet();
-        StringBuilder b = new StringBuilder();
-        for (FormDetails k : keys) {
-            b.append(k.formName +
-            	" (" +
-            	((k.formVersion != null) ?
-            			(this.getString(R.string.version) + ": " + k.formVersion + " ")
-            			: "") +
-            	"ID: " + k.formID + ") - " +
-            	result.get(k));
-            b.append("\n\n");
-        }
+	@Override
+	public void formsDownloadingComplete(HashMap<String, String> result) {
+//		// TODO Auto-generated method stub
+//	      if (mDownloadFormsTask != null) {
+//	            mDownloadFormsTask.setDownloaderListener(null);
+//	        }
+//
+//	        if (mProgressDialog.isShowing()) {
+//	            // should always be true here
+//	            mProgressDialog.dismiss();
+//	        }
+//
+//	        Set<FormDetails> keys = result.keySet();
+//	        StringBuilder b = new StringBuilder();
+//	        for (FormDetails k : keys) {
+//	            b.append(k.formName +
+//	            	" (" +
+//	            	((k.formVersion != null) ?
+//	            			(this.getString(R.string.version) + ": " + k.formVersion + " ")
+//	            			: "") +
+//	            	"ID: " + k.formID + ") - " +
+//	            	result.get(k));
+//	            b.append("\n\n");
+//	        }
+//
+//	        createAlertDialog(getString(R.string.download_forms_result), b.toString().trim(), EXIT);
+		if (mDownloadFormsTask != null) {
+			mDownloadFormsTask.setDownloaderListener(null);
+		}
 
-        createAlertDialog(getString(R.string.download_forms_result), b.toString().trim(), EXIT);
-    }
+		if (mProgressDialog.isShowing()) {
+			// should always be true here
+			mProgressDialog.dismiss();
+		}
+
+		StringBuilder b = new StringBuilder();
+		Set<String> keys = result.keySet();
+		for (String k : keys) {
+			b.append(k + " - " + result.get(k));
+			b.append("\n\n");
+		}
+
+		createAlertDialog(getString(R.string.download_forms_result), b.toString().trim(), EXIT);
+	
+	
+	}
 
 }

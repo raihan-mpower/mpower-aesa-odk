@@ -53,8 +53,10 @@ public class FileUtils {
     public static final String TITLE = "title";
     public static final String SUBMISSIONURI = "submission";
     public static final String BASE64_RSA_PUBLIC_KEY = "base64RsaPublicKey";
-
-
+    
+    public static String UI = "uiversion";
+    public static String MODEL = "modelversion";
+    
     public static boolean createFolder(String path) {
         boolean made = true;
         File dir = new File(path);

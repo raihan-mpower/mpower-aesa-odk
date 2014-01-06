@@ -214,6 +214,7 @@
         </receiver>
         <service android:name=".activities.poll_feedback_service"></service>
         <activity android:name=".activities.farmerquery_feedback_list"></activity>
+        <activity android:name=".activities.LoginActivity"></activity>
 
         </application>
 

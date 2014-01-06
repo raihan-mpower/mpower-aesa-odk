@@ -1,5 +1,6 @@
 package org.odk.collect.android.receivers;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -144,7 +145,7 @@ public class NetworkReceiver extends BroadcastReceiver implements InstanceUpload
 
 
     @Override
-    public void authRequest(Uri url, HashMap<String, String> doneSoFar) {
+    public void authRequest(URI url, HashMap<String, String> doneSoFar) {
         // if we get an auth request, just fail
         mInstanceUploaderTask.setUploaderListener(null);
         running = false;

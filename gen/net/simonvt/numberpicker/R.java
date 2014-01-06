@@ -39,10 +39,10 @@ public final class R {
 	public static final class id {
 		public static final int np__decrement = 0x7f060021;
 		public static final int np__increment = 0x7f060020;
-		public static final int np__numberpicker_input = 0x7f06009b;
+		public static final int np__numberpicker_input = 0x7f06009e;
 	}
 	public static final class layout {
-		public static final int number_picker_with_selector_wheel = 0x7f03002c;
+		public static final int number_picker_with_selector_wheel = 0x7f03002d;
 	}
 	public static final class style {
 		public static final int NPWidget = 0x7f0c0059;

@@ -15,6 +15,7 @@
 package org.odk.collect.android.application;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -218,5 +219,11 @@ public class Collect extends Application {
         mActivityLogger = new ActivityLogger(
                 mgr.getSingularProperty(PropertyManager.DEVICE_ID_PROPERTY));
     }
+
+	public static Context getAppContext() {
+		// TODO Auto-generated method stub
+		
+		return Collect.getInstance();
+	}
 
 }
