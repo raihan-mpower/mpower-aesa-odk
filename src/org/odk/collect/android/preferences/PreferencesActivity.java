@@ -114,7 +114,7 @@ public class PreferencesActivity extends PreferenceActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.preferences);
-
+		PreferenceScreen screen = getPreferenceScreen();
 		setTitle(getString(R.string.app_name) + " > "
 				+ getString(R.string.general_preferences));
 
@@ -125,7 +125,7 @@ public class PreferencesActivity extends PreferenceActivity implements
 
 		SharedPreferences adminPreferences = getSharedPreferences(
 				AdminPreferencesActivity.ADMIN_PREFERENCES, 0);
-
+		
 		boolean serverAvailable = adminPreferences.getBoolean(
 				AdminPreferencesActivity.KEY_CHANGE_SERVER, true);
 		boolean urlAvailable = adminPreferences.getBoolean(
@@ -490,6 +490,11 @@ public class PreferencesActivity extends PreferenceActivity implements
 				|| showSplashAvailable || navigationAvailable || adminMode)) {
 			getPreferenceScreen().removePreference(clientCategory);
 		}
+		screen.removeAll();
+		screen.addPreference(mFontSizePreference);
+		screen.addPreference(mNavigationPreference);
+		screen.addPreference(mUsernamePreference);
+		screen.addPreference(mPasswordPreference);
 
 	}
 
@@ -566,6 +571,7 @@ public class PreferencesActivity extends PreferenceActivity implements
 			setSplashPath(sourceImagePath);
 			break;
 		}
+		
 	}
 
 	/**

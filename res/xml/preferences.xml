@@ -32,7 +32,7 @@
             android:inputType="textNoSuggestions"
             android:key="password"
             android:title="@string/password" />
-        <!-- android:password="true" -->
+        android:password="true"
         <ListPreference
             android:id="@+id/selected_google_account"
             android:defaultValue=""
